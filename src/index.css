@@ -99,3 +99,26 @@ div[style*="background-image"] {
   will-change: transform;
   backface-visibility: hidden;
 }
+
+
+
+
+
+
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
