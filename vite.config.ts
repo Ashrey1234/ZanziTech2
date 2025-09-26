@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/ZanziTech2/',
+  base: '/ZanziTech1/',
 });
