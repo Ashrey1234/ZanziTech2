@@ -1,8 +1,14 @@
-
 import React from "react";
-import { Map, Code, BarChart3, HelpCircle, GraduationCap, Compass } from "lucide-react";
+import {
+  Map,
+  Code,
+  BarChart3,
+  HelpCircle,
+  GraduationCap,
+  Compass,
+} from "lucide-react";
 
-// Define service type
+// Define type for each service
 interface Service {
   icon: JSX.Element;
   title: string;
@@ -31,7 +37,11 @@ const Services: React.FC = () => {
       title: "Data Analytics",
       description:
         "Transform raw data into actionable insights with our comprehensive analytics and visualization services.",
-      features: ["Business Intelligence", "Data Visualization", "Predictive Analytics"],
+      features: [
+        "Business Intelligence",
+        "Data Visualization",
+        "Predictive Analytics",
+      ],
     },
     {
       icon: <HelpCircle className="w-12 h-12 text-blue-600" />,
@@ -77,7 +87,7 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              className="group bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col"
             >
               {/* Centered Icon */}
               <div className="flex justify-center mb-6">
@@ -92,7 +102,7 @@ const Services: React.FC = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 mb-6 leading-relaxed text-center">
+              <p className="text-gray-600 mb-6 leading-relaxed text-justify">
                 {service.description}
               </p>
 
@@ -109,10 +119,12 @@ const Services: React.FC = () => {
                 ))}
               </ul>
 
-              {/* Button */}
-              <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 transform group-hover:scale-105 font-medium">
-                Learn More
-              </button>
+              {/* Push Button Bottom */}
+              <div className="mt-auto">
+                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 transform group-hover:scale-105 font-medium">
+                  Learn More
+                </button>
+              </div>
             </div>
           ))}
         </div>
